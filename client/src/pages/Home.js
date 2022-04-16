@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { useQuery } from '@apollo/client';
+import { QUERY_THOUGHTS } from '../utils/queries';
+import ThoughtList from '../components/ThoughtList';
+
 const Home = () => {
   return (
     <main>
@@ -9,5 +13,8 @@ const Home = () => {
     </main>
   );
 };
+
+const thoughts = data?.thoughts || [];
+console.log(thoughts);
 
 export default Home;
