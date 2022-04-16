@@ -19,9 +19,10 @@ const typeDefs = gql`
   }
 
   type Query {
-
-     thoughts(username: String): [Thought]
-
+    users: [User]
+    user(username: String!): User
+    thoughts(username: String): [Thought]
+    thought(_id: ID!): Thought
   }
 
 `;
